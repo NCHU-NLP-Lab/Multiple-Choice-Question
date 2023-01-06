@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-# Multiple-Choice-Question
-=======
-# Multiple-Choice-Question
->>>>>>> add file
+Multiple-Choice-Question
