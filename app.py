@@ -126,7 +126,7 @@ async def mcq(
     #處理[UNK]
     for index,q in enumerate(question_set):
       if "[UNK]" in q:
-        question_set[index].remove("[UNK]")
+        question_set[index].replace("[UNK]","")
 
     question_set_len=len(question_set)
     choice_output = []
@@ -162,7 +162,7 @@ async def mcq(
               "D:" +ans[3]+"  " 
         )
       else:
-        return "查不到這個詞彙，請重新搜尋 :「"+QG_ans+"」"
+        return ["查不到這個詞彙，請重新搜尋 :「"+QG_ans+"」"]
     # 看選項有什麼
     for i in choice_output:
         print("選項:",i)
