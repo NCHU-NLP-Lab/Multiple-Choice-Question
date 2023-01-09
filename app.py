@@ -123,6 +123,11 @@ async def mcq(
 
     # 所有的question
     question_set = list(q_set)
+    #處理[UNK]
+    for index,q in enumerate(question_set):
+      if "[UNK]" in q:
+        question_set[index].remove("[UNK]")
+
     question_set_len=len(question_set)
     choice_output = []
     # a_dict=[]
